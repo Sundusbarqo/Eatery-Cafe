@@ -4,12 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="styl.css">
+  <link rel="stylesheet" href="EateryClone.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..
 700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--PERSON 1 START-->
+  <!-- Header Section -->
+  <header>
+    <a href="#" class="logo">Eatery <b style="color: red;">.</b> Cafe</a>
+    <div class="menu-btn">
+      <div class="navigation">
+        <div class="navigation-item">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">CHEF</a>
+          <a href="#">MENU</a>
+          <a href="#">CONTACT</a>
+          <a href="#">CALL NOW! <i class="fas fa-phone"></i> 010 020 0340</a>
+          <a href="#" class="Reserve">Reserve a table</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slider Section -->
+  <section class="container">
+    <div class="slider-wrapper">
+      <div class="slider">
+        
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img id="slide-1" src="https://templatemo.com/templates/templatemo_515_eatery/images/slider-image1.jpg" alt="">
+          <div class="centered-text">
+            <h1>EATERY CAFE & RESTAURANT</h1>
+            <p>Our mission is to provide an <br> unforgettable experience</p>
+            <a href="#chef" class="btn btn-1">Meet our chef</a>
+          </div>
+        </div>
+        
+                <!-- Slide 2 -->
+                <div class="slide">
+                  <img id="slide-2" src="https://templatemo.com/templates/templatemo_515_eatery/images/slider-image2.jpg" alt="">
+                  <div class="centered-text">
+                    <h1>YOUR PEREFECT BREAKFAST</h1>
+                    <p> The best dinning quality can be  <br> here too!</p>
+                    <a href="#chef" class="btn btn-2">Discover menu </a>
+                  </div>
+                </div>
+  
+                  <!-- Slide 3 -->
+        <div class="slide">
+          <img id="slide-3" src="https://templatemo.com/templates/templatemo_515_eatery/images/slider-image3.jpg" alt="">
+          <div class="centered-text">
+            <h1>NEW RESTUARANT IN TOWN</h1>
+            <p>Enjoy our special menus every <br> Sunday and Friday</p>
+            <a href="#chef" class="btn btn-3">Reservation</a>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  
+    <div class="slider-nav">
+      <a href="#slide-1"></a>
+      <a href="#slide-2"></a>
+      <a href="#slide-3"></a>
+    </div>
+  </section>
+
+
+
+
+  <scrip>
+    <script type="text/javascript">
+      //javascript of responsive navigation menu
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+
+      });
+      //javascript for image slider navigation 
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".image-slide");
+
+      var sliderNav = function(manual){
+          btns.forEach((btn) => {
+              btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+              slide.classList.remove("active");
+      });
+          btns[manual].classList.add("active");
+          slides[manual].classList.add("active");
+      }
+
+      btns.forEach((btn, i) =>  {
+          btn.addEventListener("click", () => {
+              sliderNav(i);
+          });
+      });
+  </script>
+  </script>
+     <!--PERSON 1 END-->
+
+
+
+
+  
   <article class="testimonials">
     <h2 class="test-h2">Testimonials</h2>
     <p class="test-p1">Pellentesque 
